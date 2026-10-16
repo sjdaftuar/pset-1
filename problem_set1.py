@@ -1,7 +1,8 @@
 def main():
-    blue()
-    blastoff()
-    candy_shop()
+    #blue()
+    #blastoff()
+    #candy_shop()
+    fruit_pricing()
 
 def blue():
     red = 3
@@ -43,6 +44,16 @@ def candy_shop():
 
     return(1.25*len(all_candies))
 
+def fruit_pricing():
+    fruits = {"apple":0.75, "banana":1.25, "orange":0.80, "peach":2.25, "coconut":2.80}
+    fruits["pear"] = 1.15
+    print(fruits.get("peach"))
+
+    for fruit in fruits:
+        if fruits.get(fruit) >= 1.25:
+            print(fruit)
+
+    print(3*fruits["apple"]+2*fruits["banana"]+fruits["coconut"])
 
 if __name__ == "__main__" :
     main()
